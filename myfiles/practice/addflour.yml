@@ -1,0 +1,7 @@
+---
+- name: add flour to a bowl
+  dnf:
+    name: flour
+    state: present
+    enabled: yes
+  when: ansible_os_family == 'family'

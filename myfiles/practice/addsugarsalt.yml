@@ -1,0 +1,10 @@
+- name: add sugar and salt to the bowl
+  copy: 
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: mom
+    group: mom
+    mode: 0644
+  with_items:
+  - src: saltpepper_containers
+  - dest: /kitchen/bowl

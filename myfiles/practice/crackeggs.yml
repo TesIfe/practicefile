@@ -1,0 +1,5 @@
+- name: crack eggs into the bowl
+  service:
+   name: eggs
+   state: started
+  when: ansible_os_family == 'family'

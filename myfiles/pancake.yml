@@ -1,0 +1,17 @@
+---
+- hosts: family
+  become: yes
+  become_method: sudo
+
+  vars_files:
+  - vars/linuxsecrets.yml
+
+  tasks:
+    - import_tasks: tasks/addflour.yml
+    - import_tasks: tasks/addsugarsalt.yml
+    - import_tasks: tasks/crackeggs.yml
+    - import_tasks: tasks/addmilk.yml
+    - import_tasks: tasks/mix.yml
+    - include_tasks: tasks/addpepper.yml
+      when: (pepper is defined)
+

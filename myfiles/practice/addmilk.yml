@@ -1,0 +1,7 @@
+---
+- name: add milk to the bowl
+  dnf:
+    name: milk
+    state: present
+    enabled: yes
+  when: ansible_os_family == 'family'
